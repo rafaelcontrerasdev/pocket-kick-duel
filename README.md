@@ -4,6 +4,8 @@ A browser-based two-player football kicking game designed by Rafael Contreras.
 
 Play the current version: https://paper-football-duel-rafael.secretegret8.chatgpt.site
 
+![Repository screenshot](docs/playtest-github-repo.png)
+
 ## Current prototype
 
 Each player chooses a jersey color, joins the same room, takes five shots, and competes to score through a movable yellow goalpost. The game uses a small American football, a backward drag-and-release gesture, animated kickers, shared scoreboards, and server-authoritative multiplayer turns.

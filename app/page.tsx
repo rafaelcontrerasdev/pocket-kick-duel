@@ -111,7 +111,7 @@ function Table({ hand, distance, aim, power, shot, now, canShoot, drag, handlers
       {Array.from({length:49},(_,i) => <path key={i} d={"M289 " + yardY((i+1)*2) + "h8m106 0h8"} stroke="#f1ecce" strokeOpacity=".36" strokeWidth="1.5"/>)}
       <path d={`M${350-fieldHalfWidth(94)+12} 94H${350+fieldHalfWidth(94)-12}L${350+fieldHalfWidth(524)-12} 524H${350-fieldHalfWidth(524)+12}Z`} fill="none" stroke="#f1ecce" strokeOpacity=".47" strokeWidth="2"/>
       <path d="M159 58H541L625 562H76Z" fill="url(#light)"/>
-      <text x="350" y="555" textAnchor="middle" fill="#f4ecd0" opacity=".65" fontSize="13" fontFamily="monospace" letterSpacing="6">PAPER FOOTBALL CLUB</text>
+      <text x="350" y="555" textAnchor="middle" fill="#f4ecd0" opacity=".65" fontSize="13" fontFamily="monospace" letterSpacing="6">POCKET KICK CLUB</text>
       <path d="M245 108H455" stroke="#e8ecb9" strokeDasharray="3 7" strokeOpacity=".35" strokeWidth="2"/>
       <YellowGoal x={goalX}/>
       {defender && !inShot && <g><path d={"M" + (goalX-62) + " 60l-10 7 10 7m124-14 10 7-10 7"} fill="none" stroke="#d9ee8b" strokeWidth="3"/><text x={goalX} y="128" textAnchor="middle" fill="#e9f1c8" fontSize="10" fontWeight="600">MOVE YOUR GOAL</text></g>}
@@ -380,9 +380,9 @@ export default function Home() {
 
   return <div className="app-shell">
     <header className="topbar">
-      <button className="brand" onClick={()=>mode!=="home"?setRules(true):undefined} aria-label="Paper Football Duel">
+      <button className="brand" onClick={()=>mode!=="home"?setRules(true):undefined} aria-label="Pocket Kick Duel">
         <span className="brand-icon"><svg viewBox="-32 -32 64 64"><Football scale={1.45} rotation={-35}/></svg></span>
-        <span>PAPER FOOTBALL<span className="brand-sub">THE TABLETOP DUEL</span></span>
+        <span>POCKET KICK<span className="brand-sub">THE TABLETOP DUEL</span></span>
       </button>
       <nav aria-label="Game options"><span className="edition">FIRST EDITION · 01</span><button className="icon-button" onClick={()=>{
         if(!sound){audio.current ||= new AudioContext();void audio.current.resume();}setSound(!sound);
@@ -432,7 +432,7 @@ export default function Home() {
         </aside>
       </div>
       {game && game.shots.length>0 && <section className="shot-history"><span>THE SCORECARD</span><div>{game.shots.slice(-12).map(s=><span className={"shot-chip "+(s.goal?"scored":"missed")} key={s.id}><i className={s.player?"coral":"blue"}/>{practice?"Shot "+s.round:game.players[s.player].name} · {s.distance} yd <b>{s.goal?"+1":"×"}</b></span>)}</div></section>}
-      <footer><span>A little friendly competition goes a long way.</span><span>PAPER FOOTBALL DUEL <i/> PLAYTEST EDITION</span></footer>
+      <footer><span>A little friendly competition goes a long way.</span><span>POCKET KICK DUEL <i/> PLAYTEST EDITION</span></footer>
     </main>
     <dialog ref={dialog} onCancel={()=>setRules(false)} onClick={e=>{if(e.target===dialog.current)setRules(false);}} className="rules-dialog"><button className="dialog-close icon-button" onClick={()=>setRules(false)} aria-label="Close rules"><X size={22}/></button><p className="eyebrow">WELCOME TO THE TABLE</p><h2>Easy to learn.<br/>Fun to settle.</h2>
       <ol><li><b>Bring a friend.</b> Choose a shirt, create a room and share its six-character code. The host starts when both players arrive.</li><li><b>Pull back and kick.</b> Grab the football or its glowing circle, drag backward toward yourself, then release to start the kicker’s run. A longer pull adds power; pulling left aims right and vice versa. Esc cancels. Keyboard users can set both sliders and activate “Kick with this power”. Clear the yellow crossbar for one point.</li><li><b>Keep them guessing.</b> The defender slides the yellow goal sideways within a fixed range. The goal freezes when the server accepts the kick.</li><li><b>Back it up.</b> Both players shoot once at the opponent’s 10, 20, 30, 40, then the 50. The higher score after five shots each wins.</li><li><b>Settle the tie.</b> Continue at your own 40, 30, then 20. Stay at your own 20 until a round ends with different scores. Both players always get a shot.</li></ol>

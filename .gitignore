@@ -1,0 +1,36 @@
+# Installed dependencies
+node_modules/
+
+# Build output
+.next/
+dist/
+build/
+out/
+
+# Cloudflare local development
+.wrangler/
+
+# Test coverage
+coverage/
+
+# Environment variables and secrets
+.env
+.env.*
+.dev.vars
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+
+# TypeScript-generated files
+*.tsbuildinfo
+
+# macOS files
+.DS_Store
+
+# Editor settings
+.vscode/
+.idea/

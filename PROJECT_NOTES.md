@@ -1,4 +1,4 @@
-# Paper Football Duel — design and playtest notes
+# Pocket Kick Duel — design and playtest notes
 
 Designed by Rafael Contreras. Code drafted with AI assistance; Rafael directs design, playtests, and learns the key implementation.
 
@@ -34,7 +34,7 @@ The defender moves the goal sideways, with a fixed opening and capped speed/rang
 4. Alternate shots. Check both devices show the same score and yard line.
 5. Report: what you tried, what you expected, what actually happened; include a screenshot if helpful.
 
-A private Sites deployment requires the owner to sign in on both devices. Friend testing without a Sites sign-in requires public site access.
+The deployed game is public, so friends can play without a Sites or ChatGPT sign-in.
 
 ## Checks
 

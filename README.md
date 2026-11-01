@@ -1,14 +1,36 @@
+<p align="center">
+  <img src="docs/images/pocket-kick-logo.png" alt="Pocket Kick — The Tabletop Duel" width="500">
+</p>
+
 # Pocket Kick Duel
 
 A browser-based two-player American-football kicking game designed by Rafael Contreras.
 
-**[Play Pocket Kick Duel](https://pocket-kick-duel.secretegret8.chatgpt.site)**
+<p align="center">
+  <strong><a href="https://pocket-kick-duel.secretegret8.chatgpt.site">Play Pocket Kick Duel</a></strong>
+</p>
 
 ## Overview
 
 Each player chooses a jersey color, joins the same room, and takes five shots. The kicker runs toward a small American football while the opposing player moves the yellow goalposts within a limited range.
 
 Both players shoot from the same yard line in each round, progressing from 10 to 50 yards. A successful kick is worth one point, and tied matches continue into equal-attempt overtime.
+
+## Screenshots
+
+### Multiplayer match
+
+![Pocket Kick Duel multiplayer match](docs/images/multiplayer-match.webp)
+
+### Create or join a room
+
+<p align="center">
+  <img src="docs/images/create-room.webp" alt="Pocket Kick Duel room creation and jersey selection" width="360">
+</p>
+
+### Solo practice
+
+![Pocket Kick Duel solo practice with aiming and power controls](docs/images/solo-practice.webp)
 
 ## Controls
 
